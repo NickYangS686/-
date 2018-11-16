@@ -28,7 +28,7 @@
       <ul>
         <li><a href="user.html"><i class="glyphicon glyphicon-user"></i><span>用户管理</span></a></li>
         <li>
-          <a href="javascript:;"><i class="glyphicon glyphicon-list"></i><span>分类管理</span></a>
+          <a href="javascript:;" class="tog"><i class="glyphicon glyphicon-list"></i><span>分类管理</span></a>
             <div class="child">
               <a href="first.html">一级分类</a>
               <a href="second.html">二级分类</a>
@@ -43,7 +43,7 @@
   <div class="main">
     <div class="topbar">
     <a href="#" class="icon-left pull-left"><i class="glyphicon glyphicon-align-justify"></i></a>
-    <a href="#" class="icon-right pull-right"><i class="glyphicon glyphicon-log-out" ></i></a>
+    <a href="#" class="icon-right pull-right" data-toggle="modal" data-target="#myModal"><i class="glyphicon glyphicon-log-out" ></i></a>
     </div>
     <!-- container-fluid 流式布局容器(宽度100%) -->
     <div class="container-fluid">
@@ -56,6 +56,30 @@
 
   </div>
 
+  <!-- 模态框 凌驾于整个屏幕上  所以单独写出来 在这里引用的是bootstrap里面的js插件-->
+  <div class="modal fade" tabindex="-1" id="myModal">
+    <!-- 内部的模态框 -->
+    <div class="modal-dialog modal-sm">
+      <div class="modal-content">
+        <!-- 头部 -->
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title">温馨提示</h4>
+        </div>
+        <!-- 中间 -->
+        <div class="modal-body" style="color:#A94442;">
+          <i class="glyphicon glyphicon-info-sign"></i>
+          <span>您确定要退出后台管理系统吗？</span>
+        </div>
+        <!-- 底部 -->
+        <!-- data-dismiss="modal"可以用来关闭模态框 -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+          <button type="button" class="btn btn-primary" id="outbtn">退出</button>
+        </div>
+      </div>
+    </div>
+  </div>
 
 
 
@@ -71,5 +95,7 @@
   <!-- 自定义js -->
   <script src="./js/common.js"></script>
   <script src="./js/login.js"></script>
+  <!-- 判断用户是否登录 -->
+  <script src="./js/isLogin.js"></script>
 </body>
 </html>

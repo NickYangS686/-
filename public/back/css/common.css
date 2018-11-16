@@ -36,6 +36,11 @@ ul{
   width: 180px;
   background: #222D32;
   z-index: 99;
+  transition: all 1s;
+}
+/* 当aside有这个hidemenu类名的时候，就让他做出下列样式 */
+.aside.hidemenu{
+  left: -184px;
 }
 .aside .title{
   width: 100%;
@@ -94,6 +99,10 @@ ul{
   height: 1000px;
   padding-left: 180px;
   padding-top: 50px;
+  transition: all 1s;
+}
+.main.hidemenu{
+  padding-left: 0;
 }
 .topbar{
   position: fixed;
@@ -103,6 +112,10 @@ ul{
   height: 50px;
   width: 100%;
   background-color: #3C8DBC;
+  transition: all 1s;
+}
+.topbar.hidemenu{
+  padding-left: 0;
 }
 .topbar a{
   width: 50px;
