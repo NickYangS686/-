@@ -125,3 +125,10 @@ ul{
   text-align: center;
   font-size: 20px;
 }
+
+.echarts_left,
+.echarts_right{
+  height: 400px;
+  width: 48%;
+  /* background-color: pink; */
+}
