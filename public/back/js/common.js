@@ -13,7 +13,7 @@
     // 延时器，5毫秒后触发
     setTimeout(function(){
       NProgress.done();
-    },1500)
+    },500)
   })
 
   //jquery入口函数，等待dom结构加载完成后，就执行

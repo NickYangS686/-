@@ -104,6 +104,10 @@ ul{
 .main.hidemenu{
   padding-left: 0;
 }
+.main .table-bordered td{
+  text-align: center;
+  vertical-align: middle;
+}
 .topbar{
   position: fixed;
   top: 0;
