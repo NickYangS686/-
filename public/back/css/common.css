@@ -136,3 +136,7 @@ ul{
   width: 48%;
   /* background-color: pink; */
 }
+
+table th{
+  text-align: center;
+}
