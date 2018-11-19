@@ -7,11 +7,12 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>加拿大电鳗</title>
   <!-- 基于mui的框架 -->
-  <link rel="stylesheet" href="./lib/mui/css/mui.min.css">
+  <link rel="stylesheet" href="./lib/mui/css/mui.css">
   <!-- 引入标题图标 -->
   <link rel="icon" href="./favicon.ico">
   <!-- 引入字体图标 -->
   <link rel="stylesheet" href="./lib/fa/css/font-awesome.min.css">
+  <!-- 引入自定义css -->
   <link rel="stylesheet" href="./css/index.css">
 </head>
 <body>
@@ -28,8 +29,8 @@
         <div class="mui-scroll-wrapper">
             <div class="mui-scroll">
       
+              <!-- 轮播图区域 -->
               <div class="mui-slider">
-                <!-- 轮播图区域 -->
                 <div class="mui-slider-group mui-slider-loop">
                   <!--支持循环，需要重复图片节点-->
                   <!-- 假图 -->
@@ -60,7 +61,70 @@
                   <div class="mui-indicator"></div>
                 </div>
               </div>
-      
+              <!-- nav导航区域 -->
+              <div class="nav">
+                <ul class="mui-clearfix">
+                  <li>
+                    <a href="#"><img src="./images/nav1.png" alt=""></a>
+                  </li>
+                  <li>
+                    <a href="#"><img src="./images/nav2.png" alt=""></a>
+                  </li>
+                  <li>
+                    <a href="#"><img src="./images/nav3.png" alt=""></a>
+                  </li>
+                  <li>
+                    <a href="#"><img src="./images/nav4.png" alt=""></a>
+                  </li>
+                  <li>
+                    <a href="#"><img src="./images/nav5.png" alt=""></a>
+                  </li>
+                  <li>
+                    <a href="#"><img src="./images/nav6.png" alt=""></a>
+                  </li>
+                </ul>
+              </div>
+              <!-- 产品区域 -->
+              <div class="product">
+               <ul class="mui-clearfix">
+                 <li class="product_item">
+                   <a href="#"><img src="./images/product.jpg" alt=""></a>
+                   <p>adidas阿迪达斯 男式 场下休闲篮球鞋S83700场下休闲篮球鞋S83700 </p>
+                   <p>
+                     <span class="price">￥250</span>
+                     <span class="oldPrice">￥250</span>
+                   </p>
+                   <button class="mui-btn mui-btn-danger">立即购买</button>
+                 </li>
+                 <li class="product_item">
+                   <a href="#"><img src="./images/product.jpg" alt=""></a>
+                   <p>adidas阿迪达斯 男式 场下休闲篮球鞋S83700场下休闲篮球鞋S83700 </p>
+                   <p>
+                     <span class="price">￥250</span>
+                     <span class="oldPrice">￥250</span>
+                   </p>
+                   <button class="mui-btn mui-btn-danger">立即购买</button>
+                 </li>
+                 <li class="product_item">
+                   <a href="#"><img src="./images/product.jpg" alt=""></a>
+                   <p>adidas阿迪达斯 男式 场下休闲篮球鞋S83700场下休闲篮球鞋S83700 </p>
+                   <p>
+                     <span class="price">￥250</span>
+                     <span class="oldPrice">￥250</span>
+                   </p>
+                   <button class="mui-btn mui-btn-danger">立即购买</button>
+                 </li>
+                 <li class="product_item">
+                   <a href="#"><img src="./images/product.jpg" alt=""></a>
+                   <p>adidas阿迪达斯 男式 场下休闲篮球鞋S83700场下休闲篮球鞋S83700 </p>
+                   <p>
+                     <span class="price">￥250</span>
+                     <span class="oldPrice">￥250</span>
+                   </p>
+                   <button class="mui-btn mui-btn-danger">立即购买</button>
+                 </li>
+               </ul>
+              </div>
             </div>
           </div>
     </div>
@@ -68,7 +132,7 @@
     <div class="footer">
       <ul>
         <li>
-          <a href="index.html">
+          <a  class="current" href="index.html">
             <i class="fa fa-home"></i>
             <p>首页</p>
           </a>
@@ -96,6 +160,7 @@
   </div>
   <!-- 引入mui的js包 -->
   <script src="./lib/mui/js/mui.js"></script>
+  <!-- 设置区域滚动的，初始化 -->
   <script src="./js/common.js"></script>
 </body>
 </html>
