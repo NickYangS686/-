@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>加拿大电鳗</title>
+  <!-- 基于mui的框架 -->
+  <link rel="stylesheet" href="./lib/mui/css/mui.css">
+  <!-- 引入标题图标 -->
+  <link rel="icon" href="./favicon.ico">
+  <!-- 引入字体图标 -->
+  <link rel="stylesheet" href="./lib/fa/css/font-awesome.min.css">
+  <!-- 引入公共样式 -->
+  <link rel="stylesheet" href="./css/common.css">
+  <!-- 引入自定义css -->
+  <link rel="stylesheet" href="./css/category.css">
+</head>
+<body>
+  <!-- 由于内部有区域滚动  所以外部盒子是一个全屏容器 -->
+  <div class="container">
+    <!-- 头部 -->
+    <div class="header">
+      <a href="index.html" class="icon_left"><i class="fa fa-home"></i></a>
+      <h3>乐淘云购</h3>
+      <a href="search.html" class="icon_right"><i class="fa fa-search"></i></a>
+    </div>
+    <!-- 中间内容部分 -->
+    <div class="main">
+        <!-- 左侧 -->
+        <div class="category_left">
+           <!-- 区域滚动组件 要给其父盒子定位-->
+            <div class="mui-scroll-wrapper">
+                <div class="mui-scroll"> 
+                  <ul>
+                   <!-- 挖个坑 -->
+                  </ul>
+                </div>
+             </div>
+        </div>
+        <!-- 右侧 -->
+        <div class="category_right">
+          <!-- 区域滚动组件 要给其父盒子定位-->
+            <div class="mui-scroll-wrapper">
+                <div class="mui-scroll"> 
+                  <ul class="mui-clearfix">
+                    <!-- 挖个坑 -->
+                  </ul>
+                </div>
+             </div>
+        </div>
+    </div>
+
+
+    <!-- 底部 -->
+    <div class="footer">
+      <ul>
+        <li>
+          <a href="index.html">
+            <i class="fa fa-home"></i>
+            <p>首页</p>
+          </a>
+        </li>
+        <li>
+          <a  class="current" href="category.html">
+            <i class="fa fa-bars"></i>
+            <p>分类页</p>
+          </a>
+        </li>
+        <li>
+          <a href="cart.html">
+            <i class="fa fa-shopping-cart"></i>
+            <p>购物车</p>
+          </a>
+        </li>
+        <li>
+          <a href="user.html">
+            <i class="fa fa-user"></i>
+            <p>用户中心</p>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <!-- 左侧模板引擎 -->
+  <script type="text/html" id="category_left_tpl">
+    {{ each rows v i }}
+    <li>
+        <a class="{{ i===0 ? "current" : ''}}" data-id="{{ v.id }}" href="#">{{ v.categoryName }}</a>
+      </li>
+    {{ /each }}
+  </script>
+  <!-- 右侧模板引擎 -->
+  <script type="text/html" id="category_right_tpl">
+    {{ if rows.length === 0}}
+      <p>没有东西了，走吧</p>
+    {{else}}
+
+        {{ each rows v i}}
+          <li>
+            <a href="#">
+              <img src="{{ v.brandLogo }}" alt="">
+              <p>{{ v.brandName }}</p>
+            </a>
+          </li>
+          {{ /each }}
+    {{ /if }}
+  </script>
+
+
+  <!-- 引入mui的js包 -->
+  <script src="./lib/mui/js/mui.js"></script>
+  <!-- 引入zepto -->
+  <script src="./lib/zepto/zepto.min.js"></script>
+  <!-- 引入模板引擎 -->
+  <script src="./lib/artTemplate/template-web.js"></script>
+  <!-- 设置区域滚动的，初始化 -->
+  <script src="./js/common.js"></script>
+  <script src="./js/category.js"></script>
+</body>
+</html>

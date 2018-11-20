@@ -1,0 +1,47 @@
+.category_left{
+  float: left;
+  width: 90px;
+  height: 100%;
+  position: relative;
+}
+.category_left ul li{
+  width: 90px;
+  height: 50px;
+  text-align: center;
+  line-height: 50px;
+  background: #e3e4e5;
+ 
+}
+.category_left ul li a.current{
+  background-color: #fff;
+  border-right: none;
+}
+.category_left ul li a{
+  display: block;
+  width: 100%;
+  height: 100%;
+  color: #666;
+  border-bottom: 1px solid #ccc;
+  border-right:1px solid #ccc;
+}
+
+.category_right{
+  /* width: 100%; 不能给宽*/
+  height: 100%;
+  /* 触发BFC */
+  overflow: hidden;
+  position: relative;
+}
+.category_right ul{
+  padding: 10px;
+}
+.category_right ul li{
+  float: left;
+  width: 33.3%;
+  text-align: center;
+  margin-bottom: 10px;
+}
+.category_right ul li img{
+  width: 70px;
+  height: 50px;
+}
